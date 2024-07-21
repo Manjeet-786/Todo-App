@@ -1,0 +1,150 @@
+/* .login {
+    background-color: rgb(138, 226, 163);
+    height: 100vh;
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+}
+
+.logindata {
+    height: 50vh;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    background-color: white;
+    padding: 5%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.logindata a {
+    text-decoration: none;
+    margin-left: 25%;
+    font-weight: bold;
+    color:Blue;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 50%;
+    margin-top: 15px;
+    border-radius: 1rem;
+}
+
+form button:hover {
+    background-color: wheat;
+    color: black;
+    border: none;
+    border-radius: 1rem;
+    transition: 0.5s all;
+}
+
+.logindata .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.login {
+background-color: rgb(138, 226, 163);
+height: 100vh;
+max-width: 1140px;
+margin: auto;
+position: relative;
+}
+
+.logindata {
+height: 50vh;
+width: 40%;
+position: absolute;
+left: 30%;
+top: 10%;
+background-color: white;
+padding: 5%;
+border-radius: 1rem;
+display: flex;
+justify-content: center;
+}
+
+.logindata a {
+text-decoration: none;
+margin-left: 25%;
+font-weight: bold;
+color: blue;
+}
+
+form button {
+background-color: black;
+color: white;
+height: 40px;
+width: 50%;
+margin-top: 15px;
+border-radius: 1rem;
+}
+
+form button:hover {
+background-color: wheat;
+color: black;
+border: none;
+border-radius: 1rem;
+transition: 0.5s all;
+}
+
+.logindata .btn {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Add media queries for responsiveness */
+
+@media (max-width: 1200px) {
+.login {
+max-width: 90%;
+}
+.logindata {
+width: 50%;
+}
+}
+
+@media (max-width: 992px) {
+.login {
+max-width: 80%;
+}
+.logindata {
+width: 60%;
+}
+}
+
+@media (max-width: 768px) {
+.login {
+max-width: 70%;
+}
+.logindata {
+width: 80%;
+left: 10%;
+}
+form button {
+width: 80%;
+}
+}
+
+@media (max-width: 480px) {
+.login {
+max-width: 100%;
+}
+.logindata {
+width: 100%;
+left: 0%;
+top: 20%;
+}
+form button {
+width: 100%;
+}
+}
+
+

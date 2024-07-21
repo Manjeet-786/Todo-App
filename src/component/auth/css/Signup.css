@@ -1,0 +1,175 @@
+/* .form {
+    background-color: rgb(138, 226, 163);
+    height: 100vh;
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .formdata {
+    height: 80vh;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    background-color: white;
+    box-shadow: 5px 5px   black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .formdata a {
+    text-decoration: none;
+    margin-left: 25%;
+    font-weight: bold;
+    color:blue;
+   
+  }
+  
+  form input {
+    height: 30px;
+    width: 100%;
+    border: 2px solid black;
+    margin: 5px;
+  }
+  
+  form button {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 50%;
+    margin-top: 15px;
+  }
+  
+  form button:hover {
+    background-color: wheat;
+    color: black;
+    border: none;
+    border-radius: 1rem;
+    transition: 0.5s all;
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .form {
+      height: 70vh;
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    .formdata {
+      width: 80%;
+      left: 10%;
+      top: 20%;
+      padding: 10px;
+    }
+  
+    .formdata a {
+      margin-left: 20px;
+    }
+  
+    form input {
+      height: 30px;
+    }
+    form button {
+        height: 30px;
+        margin-top: 10px;
+      }
+    }       */
+  
+
+    .form {
+      background-color: rgb(138, 226, 163);
+      height: 100vh;
+      max-width: 1140px;
+      margin: auto;
+      position: relative;
+    }
+    
+    .formdata {
+      height: 80vh;
+      width: 40%;
+      position: absolute;
+      left: 30%;
+      top: 10%;
+      background-color: white;
+      box-shadow: 5px 5px black;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .formdata a {
+      text-decoration: none;
+      margin-left: 25%;
+      font-weight: bold;
+      color: blue;
+    }
+    
+    form input {
+      height: 30px;
+      width: 100%;
+      border: 2px solid black;
+      margin: 5px;
+    }
+    
+    form button {
+      background-color: black;
+      color: white;
+      height: 40px;
+      width: 50%;
+      margin-top: 15px;
+    }
+    
+    form button:hover {
+      background-color: wheat;
+      color: black;
+      border: none;
+      border-radius: 1rem;
+      transition: 0.5s all;
+    }
+    
+    /* Add media queries for responsiveness */
+    
+    @media (max-width: 1200px) {
+      .formdata {
+        width: 50%;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .formdata {
+        width: 60%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .formdata {
+        width: 80%;
+        left: 10%;
+      }
+      form input {
+        height: 20px;
+      }
+      form button {
+        width: 80%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .formdata {
+        width: 100%;
+        left: 0%;
+        top: 20%;
+      }
+      form input {
+        height: 20px;
+      }
+      form button {
+        width: 100%;
+      }
+    }
+    
+    
+    

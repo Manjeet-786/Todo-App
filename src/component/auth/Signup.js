@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import './css/Signup.css'
 
 const Reg = () => {
-
     const [id, idchange] = useState("");
     const [name, namechange] = useState("");
     const [password, passwordchange] = useState("");
@@ -15,7 +14,6 @@ const Reg = () => {
     const [gender, genderchange] = useState("female");
 
     const navigate = useNavigate();
-
     const IsValidate = () => {
         let isproceed = true;
         let errormessage = 'Please enter the value in ';

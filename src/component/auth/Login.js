@@ -41,8 +41,7 @@ const Login = () => {
   const ProceedLoginusingAPI = (e) => {
     e.preventDefault();
     if (validate()) {
-      ///implentation
-      // console.log('proceed');
+    
       let inputobj = {
         "username": username,
         "password": password
@@ -90,11 +89,11 @@ const Login = () => {
                 </div>
                 <div>
                     <div >
-                        <label>User Name <span className="errmsg"></span></label>
+                        <label>User Name</label>
                         <input value={username} onChange={e => usernameupdate(e.target.value)} placeholder="Enter your name"></input>
                     </div>
                     <div >
-                        <label>Password <span className="errmsg"></span></label>
+                        <label>Password </label>
                         <input type="password" value={password} onChange={e => passwordupdate(e.target.value)} placeholder="Enter password"></input>
                     </div>
                 </div>

@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 function Table() {
   const usenavigate = useNavigate();
 
- 
   useEffect(() => {
       let username=sessionStorage.getItem('username')
       if(username === '' || username===null){
@@ -20,26 +19,34 @@ function Table() {
   const [isCompleteScreen, setIsCompleteScreen] = useState(false);
   const [allTodos, setTodos] = useState([]);
   const [newTitle, setNewTitle] = useState('');
-  const [priority, setPriority] = useState('');
+  const [newPriority, setNewPriority] = useState('');
   const [newDescription, setNewDescription] = useState('');
   const [completedTodos, setCompletedTodos] = useState([]);
   const [currentEdit, setCurrentEdit] = useState("");
   const [currentEditedItem, setCurrentEditedItem] = useState("");
 
+  let newTodoItem = {
+    priority: newPriority, 
+    title: newTitle,
+    description: newDescription,
+  };
+  
   const handleAddTodo = () => {
-    let newTodoItem = {
-        priority:priority,
-      title: newTitle,
-      description: newDescription,
-    };
-
     let updatedTodoArr = [...allTodos];
     updatedTodoArr.push(newTodoItem);
     setTodos(updatedTodoArr);
     localStorage.setItem('todolist', JSON.stringify(updatedTodoArr));
     setNewDescription("")
     setNewTitle('')
-    setPriority("")
+    setNewPriority("")
+    updatedTodoArr.sort((a, b) => {
+      if (a.priority === 'high' && b.priority !== 'high') return -1;
+      if (a.priority === 'medium' && b.priority === 'low') return -1;
+      if (a.priority === 'low' && b.priority === 'medium') return 1;
+      return 0;
+    });
+    
+    setTodos(updatedTodoArr);
   };
 
   const handleDeleteTodo = index => {
@@ -70,6 +77,14 @@ function Table() {
     setCompletedTodos(updatedCompletedArr);
     handleDeleteTodo(index);
     localStorage.setItem('completedTodos', JSON.stringify(updatedCompletedArr));
+
+    updatedCompletedArr.sort((a, b) => {
+      if (a.priority === 'high' && b.priority !== 'high') return -1;
+      if (a.priority === 'medium' && b.priority === 'low') return -1;
+      if (a.priority === 'low' && b.priority === 'medium') return 1;
+      return 0;
+    });
+      setCompletedTodos(updatedCompletedArr);
   };
 
   const handleDeleteCompletedTodo = index => {
@@ -127,6 +142,7 @@ function Table() {
     localStorage.setItem('todolist', JSON.stringify(items));
   };
 
+
   return (
     <div className="main">
       <h1>Todo App</h1>
@@ -144,7 +160,8 @@ function Table() {
           </div>
           <div className="todo-input-item">
             <label>Priority</label>
-            <input type="text"value={priority}onChange={e => setPriority(e.target.value)}placeholder="What's the task Priority" />
+            <input type="text"value={newPriority}onChange={e => setNewPriority(e.target.value)}placeholder="low,medium,high ? " />
+          
           </div>
           <div className="todo-input-item">
             <button type="button" onClick={handleAddTodo} className="primaryBtn" >Add </button>
@@ -174,7 +191,8 @@ function Table() {
                               <div className="todo-list-item"{...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}> <div>
                                   <h3> {index+1} Title :{item.title}</h3>
                                   <p>Description: {item.description}</p>
-                                  <p>Priority-Level : {item.priority} </p>
+                                  <h4>Priority-Level: {item.priority}</h4>
+
                                 </div>
                                 <div>
                                   <AiOutlineDelete className="icon" onClick={() => handleDeleteTodo(index)} title="Delete?" />
@@ -201,9 +219,9 @@ function Table() {
                   <div>
                     <h3>Title : {item.title}</h3>
                     <p>Description: {item.description}</p>
-                    <p>Completed on: {item.completedOn}</p>
+                    <h6>Completed on: {item.completedOn}</h6>
+                    <h6>Priority-Level: {item.priority}</h6>
                   </div>
-
                   <div>
                     <AiOutlineDelete className="icon"onClick={() => handleDeleteCompletedTodo(index)}title="Delete?"/>
                   </div>

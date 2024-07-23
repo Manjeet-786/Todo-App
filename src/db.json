@@ -111,6 +111,86 @@
       "country": "india",
       "address": "sdfghjn",
       "gender": "female"
+    },
+    {
+      "id": "Simran",
+      "name": "sim",
+      "password": "123",
+      "email": "Sim@gmail.com",
+      "phone": "9987643",
+      "country": "india",
+      "address": "Punjab",
+      "gender": "female"
+    },
+    {
+      "id": "Sanju",
+      "name": "sanju",
+      "password": "123",
+      "email": "sanju@gmail.com",
+      "phone": "99345678",
+      "country": "india",
+      "address": "Punjab",
+      "gender": "female"
+    },
+    {
+      "id": "s",
+      "name": "s",
+      "password": "s",
+      "email": "sim@gmail.com",
+      "phone": "",
+      "country": "india",
+      "address": "1234e",
+      "gender": "female"
+    },
+    {
+      "id": "Simmu",
+      "name": "simmu",
+      "password": "1234",
+      "email": "simmu@gmail.com",
+      "phone": "09876543",
+      "country": "usa",
+      "address": "punjab",
+      "gender": "female"
+    },
+    {
+      "id": "Simranjeet",
+      "name": "simrankaur",
+      "password": "123",
+      "email": "simran@gmail.com",
+      "phone": "9061234567",
+      "country": "india",
+      "address": "Punjab",
+      "gender": "female"
+    },
+    {
+      "id": "neetu",
+      "name": "neetu",
+      "password": "1234",
+      "email": "neet@gmail.com",
+      "phone": "987654",
+      "country": "india",
+      "address": "hp",
+      "gender": "female"
+    },
+    {
+      "id": "Kaur",
+      "name": "kaur",
+      "password": "12345",
+      "email": "Kaur@gmail.com",
+      "phone": "99876543",
+      "country": "india",
+      "address": "Punjab",
+      "gender": "female"
+    },
+    {
+      "id": "Waheguru",
+      "name": "waheguru",
+      "password": "ji",
+      "email": "Wah@gmail.com",
+      "phone": "99876543",
+      "country": "india",
+      "address": "Punjab",
+      "gender": "female"
     }
   ],
   "roleaccess": [
